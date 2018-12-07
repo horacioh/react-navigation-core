@@ -4,7 +4,7 @@
     "module": "commonjs",
     "lib": ["es7"],
     "jsx": "react",
-    "sourceMap": true,
+    "sourceMap": false,
     "moduleResolution": "node",
     "rootDir": "src",
     "forceConsistentCasingInFileNames": true,
@@ -24,8 +24,18 @@
     "esModuleInterop": true,
     "allowJs": true
   },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": ["**/__tests__", "dist", ".jest", "node_modules", "coverage", "example", "./jest.config.js"]
+  "typeAcquisition": {
+    "enable": true,
+    "include": ["prop-types", "react", "react-native"]
+  },
+  "include": ["src/**/*"],
+  "exclude": [
+    "**/__tests__",
+    "dist",
+    ".jest",
+    "node_modules",
+    "coverage",
+    "example",
+    "./jest.config.js"
+  ]
 }
